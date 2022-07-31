@@ -790,8 +790,8 @@ block content
                                     p
                                         | Dedicated support manager 24/7
                                         img(src='img/check.png' alt='true' width='20')
-        form.propertyForm
-            h2 Give us a few details about you
+        h2.test Give us a few details about you
+        form.solutionsForm
             .container
                 .propertyForm-left
                     .propertyInput
@@ -799,54 +799,54 @@ block content
                             | Your Brand Name:
                             span.required *
                         br
-                        input(type='text' placeholder='Brand Name' required='')
+                        input#brand_name(type='text' placeholder='Brand Name' required='')
                     .propertyInput
                         label
                             | Restaurant/Store or Hotel Name:
                             span.required *
                         br
-                        input(type='text' placeholder='Phone Number' required='')
+                        input#brand_number(type='text' placeholder='Brand Number' required='')
                     .propertyInput
                         label
                             | Payment method:
                             span.required *
                         br
-                        select(required='')
-                            option(value='Basic') Basic
-                            option(value='Standart') Standart
-                            option(value='Smart') Smart
-                            option(value='Premium') Premium
+                        select#method(required='')
+                            option(value='basic') Basic
+                            option(value='standart') Standart
+                            option(value='smart') Smart
+                            option(value='premium') Premium
                     .propertyInput
                         label
                             | Name:
                             span.required *
                         br
-                        input(type='text' placeholder='Name' required='')
+                        input#name(type='text' placeholder='Name' required='')
                 .propertyForm-right
                     .propertyInput
                         label
                             | Payment method:
                             span.required *
                         br
-                        select(required='')
-                            option(value='Monthly') Monthly
-                            option(value='Yearly') Yearly
+                        select#pay_method(required='')
+                            option(value='monthly') Monthly
+                            option(value='yearly') Yearly
                     .propertyInput
                         label
                             | Phone Number:
                             span.required *
                         br
-                        input(type='text' placeholder='Phone Number' required='')
+                        input#phone_number(type='text' placeholder='Phone Number' required='')
                     .propertyInput
                         label
                             | Email:
                             span.required *
                         br
-                        input(type='text' placeholder='Email' required='')
+                        input#solution_email(type='text' placeholder='Email' required='')
                     .propertyInput
                         label
                             | Comment:
                             span.required *
                         br
-                        input(type='text' placeholder='Comment' required='')
+                        input#solutions_comment(type='text' placeholder='Comment' required='')
                     button(type='submit') Submit

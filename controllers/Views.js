@@ -249,5 +249,69 @@ const addBusinessComment = catchAsync(async(req,res,next) => {
             })
         }
 });
-module.exports = {getHome,getSolutions,getRestaurant,getAbout,getStore,getProperty,addRestaurantComment,getEnrollKitchen,addPropertyComment,addEnrollKitchen,addBusinessComment};
+const addSolutionsComment = catchAsync(async(req,res,next) => {
+    const {name,brand_name,brand_number,method,email,phone_number,pay_method,comment} = req.body;
+    if (!name || !brand_name || !brand_number || !email || !phone_number || !method || !pay_method || !comment) {
+        return res.status(400).json({
+            error: 'Please provide name,brand_name,brand_number,email,phone_number,method,pay method and comment'
+        })
+    }
+    console.log(name);
+    console.log(brand_name);
+    console.log(brand_number);
+    console.log(method);
+    console.log(email);
+    console.log(phone_number);
+    console.log(pay_method);
+    console.log(comment);
+    const data = (await db.Solutions.create({
+        name,
+        brand_name,
+        brand_number,
+        method,
+        email,
+        phone_number,
+        pay_method,
+        comment,
+    })).get({plain: true});
+    if(data){
+        let message = {
+            from: process.env.MAIL_FROM,
+            to: 'smrquluzade@gmail.com',
+            subject: "Solutions Comment",
+            text: `
+                Name: ${name} \n
+                Brand name: ${brand_name} \n
+                Brand number: ${brand_number} \n
+                Email: ${email} \n
+                Phone number: ${phone_number} \n
+                Method: ${method} \n
+                Payment method: ${pay_method} \n
+                Comment: ${comment} \n
+            `
+        }
+        const response = await sendMail(message);
+        if(response.rejected.length === 0){
+            return res.status(201).json({
+                success: true
+            })
+        }
+        else{
+            await db.Solutions.destroy({
+                where: {
+                    id: data.id
+                }
+            });
+            return res.status(400).json({
+                success: false
+            })
+        }
+    }
+    else{
+        return res.status(400).json({
+            success: false
+        })
+    }
+});
+module.exports = {getHome,getSolutions,getRestaurant,getAbout,getStore,getProperty,addRestaurantComment,getEnrollKitchen,addPropertyComment,addEnrollKitchen,addBusinessComment,addSolutionsComment};
 

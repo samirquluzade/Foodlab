@@ -12,6 +12,11 @@ module.exports = (sequelize,DataTypes) => {
             // foreign key
             allowNull: false,
         },
+        brand_number:{
+            type:DataTypes.STRING(100),
+            // foreign key
+            allowNull: false,
+        },
         email:{
             type:DataTypes.STRING(100),
             validate: {
@@ -25,10 +30,14 @@ module.exports = (sequelize,DataTypes) => {
             // foreign key
             allowNull: false,
         },
-        hotel_name:{
-            type:DataTypes.STRING(255),
+        method:{
+            type:DataTypes.ENUM("basic","standart","smart","premium"),
             // foreign key
             allowNull: false,
+        },
+        pay_method: {
+            type: DataTypes.ENUM("monthly","yearly"),
+            allowNull: false
         },
         name:{
             type:DataTypes.STRING(255),

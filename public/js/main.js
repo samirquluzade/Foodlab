@@ -1,4 +1,10 @@
-import {businessOperations, kitchenOperations, modalOperations, propertyOperations} from "./modals/index";
+import {
+  businessOperations,
+  kitchenOperations,
+  modalOperations,
+  propertyOperations,
+  solutionsOperations
+} from "./modals/index";
 import {successAlert,errorAlert} from "./alerts.js";
 
 const comment = document.getElementById("comments");
@@ -8,6 +14,7 @@ const kitchenForm = document.querySelector(".kitchenForm");
 const businessForm = document.querySelector(".businessForm");
 const businessRestaurantForm = document.querySelector(".businessRestaurantForm");
 const businessStoreForm = document.querySelector(".businessStoreForm");
+const solutionsForm = document.querySelector(".solutionsForm");
 const closeModal = document.getElementById("close");
 const modal = document.getElementById("modalComment");
 const contactDataForm = document.querySelector(".contact-data");
@@ -247,6 +254,44 @@ if(businessStoreForm){
   });
 }
 
+if(solutionsForm){
+  solutionsForm.addEventListener("submit",async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('solution_email').value;
+    let regexpEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let phoneNumber = document.getElementById('phone_number').value;
+    let regexpNumber = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+    if(!regexpEmail.test(email)){
+      errorAlert("error","Invalid email address");
+    }
+    else if(!regexpNumber.test(phoneNumber)){
+      errorAlert("error","Invalid phone number");
+    }
+    else {
+      const form = new FormData();
+      form.append("name",document.getElementById("name").value);
+      form.append("brand_name",document.getElementById("brand_name").value);
+      form.append("brand_number",document.getElementById("brand_number").value);
+      form.append("phone_number",document.getElementById("phone_number").value);
+      form.append("email",document.getElementById("solution_email").value);
+      form.append("method",document.getElementById("method").value);
+      form.append("pay_method",document.getElementById("pay_method").value);
+      form.append("solutions_comment",document.getElementById("solutions_comment").value);
+      const forms = await solutionsOperations(form);
+      if(forms.status === 201){
+        successAlert("success","Mesaj uğurla göndərildi");
+        document.getElementById("name").value = "";
+        document.getElementById("brand_name").value = "";
+        document.getElementById("brand_number").value = "";
+        document.getElementById("phone_number").value = "";
+        document.getElementById("solution_email").value = "";
+        document.getElementById("method").value = "";
+        document.getElementById("pay_method").value = "";
+        document.getElementById("solutions_comment").value = "";
+      }
+    }
+  });
+}
 // When click outside modal close modal
 document.addEventListener("click", function (e) {
   if (modal.classList.contains("clicked")) {

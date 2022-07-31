@@ -103,4 +103,30 @@ export const businessOperations = async data => {
         }
     }
 }
-
+export const solutionsOperations = async data => {
+    let op = {
+        name: data.get('name'),
+        brand_name: data.get('brand_name'),
+        brand_number: data.get('brand_number'),
+        email: data.get('email'),
+        phone_number: data.get('phone_number'),
+        method: data.get('method'),
+        pay_method: data.get('pay_method'),
+        comment: data.get('solutions_comment'),
+    };
+    try{
+        const res = await axios.post('http://127.0.0.1:3000/add_solutions_comment',{
+            ...op,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return res;
+    }
+    catch (err){
+        return {
+            success: false,
+            error: err
+        }
+    }
+}

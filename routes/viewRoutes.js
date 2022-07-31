@@ -14,5 +14,6 @@ router.post('/add_restaurant_comment',views.addRestaurantComment);
 router.post('/add_property_comment',views.addPropertyComment);
 router.post('/add_kitchen_comment',views.addEnrollKitchen);
 router.post('/add_business_comment',views.addBusinessComment);
+router.post('/add_solutions_comment',views.addSolutionsComment);
 
 module.exports = router;
