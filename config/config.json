@@ -1,0 +1,18 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "foodlab",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logger": false
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "foodlab",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logger": false
+  }
+}

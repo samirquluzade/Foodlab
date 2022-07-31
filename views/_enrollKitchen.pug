@@ -1,0 +1,169 @@
+extends _main
+
+block content
+
+    main
+        // Modal start
+        #modalComment.modalComment.container.col-11
+            .row
+                .modal-left.col-md-5
+                    img(src='img/contact.png' alt='photo' width='300')
+                    .contactInfo
+                        .icons
+                            .icon
+                                div
+                                    img(src='img/document.png' alt='photo' width='50')
+                                .aboutIcon
+                                    p Fill out request.
+                            .icon
+                                div
+                                    img(src='img/receive-mail.png' alt='photo' width='50')
+                                div
+                                    p Get an email from us with a guide
+                            .icon
+                                div
+                                    img(src='img/idea.png' alt='photo' width='50')
+                                div
+                                    p Write suggestions and comments
+                .modal-right.col-sm-12.col-11.col-md-6
+                    h2 Registration
+                    img#close(src='img/close.png' alt='photo' width='18')
+                    form
+                        .registerInput
+                            label(for='restaurant')
+                                | Brand name
+                                span.required *
+                            br
+                            input#restaurant(type='text' required='')
+                        .registerInput
+                            label(for='email')
+                                | Email
+                                span.required *
+                            br
+                            input#email(type='text' required='')
+                        .registerInput
+                            label(for='phone')
+                                | Phone
+                                span.required *
+                            br
+                            input#phone(type='text' required='')
+                        .registerInput
+                            label(for='textarea') Comments
+                            br
+                            textarea#textarea(name='textarea' cols='30' rows='10')
+                        button.submitForm Submit
+        // Modal finish
+        .horeca-bg
+            .container.horecaMain
+                h2 Make Money with Your Existing Kitchen
+                p Your kitchen. Our virtual restaurant concepts. It&rsquo;s a winning recipe.
+            .home-middle
+                h2 HOW IT WORKS
+                .workingMethods
+                    .method
+                        h1 1
+                        .line
+                        h5 Describe Your Kitchen
+                        p
+                            | We&rsquo;ll use powerful and accurate market data to pick the best virtual restaurant concept for your space.
+                    .method
+                        h1 2
+                        .line
+                        h5 Start Cooking
+                        p We will provide recipes, training, and delivery technology you need to succeed.
+                    .method
+                        h1 3
+                        .line
+                        h5 Earn More
+                        p You will get part of the revenue weekly from the total sales.
+        .horecaLast
+            h2
+                | COOK FOR A VIRTUAL RESTAURANT.
+                br
+                | MAKE REAL RETURNS.
+            .advantages.container
+                .advantage
+                    img(src='img/advantage1.svg' height='100' alt='photo')
+                    div
+                        h3 Act According to demand.
+                    p
+                        | With the help our accurate powerful data we will identify best virtual concept for your area.
+                .advantage
+                    img(src='img/advantage2.svg' height='100' alt='photo')
+                    div
+                        h3 Turn downtime into upside
+                    p Fulfill virtual restaurant orders during your business&rsquo;s off-peak periods
+                .advantage
+                    img(src='img/advantage3.svg' height='100' alt='photo')
+                    div
+                        h3 Keep Organized
+                    p
+                        | By using our technology you will be able to build data based sustainable business.
+                .advantage
+                    img(src='img/advantage4.svg' height='100' alt='photo')
+                    div
+                        h3 Level Up
+                    p
+                        | Add more virtual restaurant concepts to your kitchen&rsquo;s roster when you&rsquo;re ready to scale.
+        h2.test Give us a few details about you
+        form.kitchenForm
+            .container
+                .propertyForm-left
+                    .propertyInput
+                        label
+                            | Your Brand Name:
+                            span.required *
+                        br
+                        input#kitchen_name(type='text' placeholder='Brand Name')
+                    .propertyInput
+                        label
+                            | Your Address:
+                            span.required *
+                        br
+                        input#kitchen_address(type='text' placeholder='Address')
+                    .propertyInput
+                        label
+                            | Your Phone:
+                            span.required *
+                        br
+                        input#kitchen_phone(type='text' placeholder='Phone')
+                    .propertyInput
+                        label
+                            | Your Email:
+                            span.required *
+                        br
+                        input#kitchen_email(type='text' placeholder='Email')
+                .propertyForm-right
+                    .propertyInput
+                        label
+                            | Your Kitchen Type:
+                            span.required *
+                        select#kitchen_type
+                            option(value='Select Kitchen Type') Select Kitchen Type
+                            option(value='catering_company') Catering company
+                            option(value='food_truck') Food Truck
+                            option(value='hotel') Hotel
+                            option(value='ghost_kitchen') Ghost Kitchen
+                            option(value='pub/bar') Pub/Bar
+                            option(value='restaurants') Restaurants
+                            option(value='home') Home
+                            option(value='other') Other
+                    .propertyInput
+                        label
+                            | What Food do you serve?
+                            span.required *
+                        select#kitchen_food
+                            option(value='Doner&Shaurma') Doner &amp; Shaurma
+                            option(value='Turkish') Turkish
+                            option(value='Burger') Burger
+                            option(value='Pizza&Lahmacun') Pizza &amp; Lahmacun
+                            option(value='Sushi, Sea Food') Sushi, Sea Food
+                            option(value='Healthy,Salad') Healthy,Salad
+                            option(value='Chicken') Chicken
+                            option(value='Fast_Food') Fast Food
+                            option(value='Dessert') Dessert
+                            option(value='Mexican/Middle East') Mexican/Middle East
+                            option(value='Breakfast/Lunch') Breakfast/Lunch
+                            option(value='Asian, Chinese') Asian, Chinese
+                    button(type='submit') Submit
+        // Home finish

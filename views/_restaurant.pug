@@ -1,0 +1,173 @@
+extends _main
+
+block content
+
+    main
+        // Modal start
+        #modalComment.modalComment.container.col-11
+            .row
+                .modal-left.col-md-5
+                    img(src='img/contact.png' alt='photo' width='300')
+                    .contactInfo
+                        .icons
+                            .icon
+                                div
+                                    img(src='img/document.png' alt='photo' width='50')
+                                .aboutIcon
+                                    p Fill out request.
+                            .icon
+                                div
+                                    img(src='img/receive-mail.png' alt='photo' width='50')
+                                div
+                                    p Get an email from us with a guide
+                            .icon
+                                div
+                                    img(src='img/idea.png' alt='photo' width='50')
+                                div
+                                    p Write suggestions and comments
+                .modal-right.col-11.col-sm-12.col-md-6
+                    h2 Registration
+                    img#close(src='img/close.png' alt='photo' width='18')
+                    form
+                        .registerInput
+                            label(for='restaurant')
+                                | Restaurant name
+                                span.required *
+                            br
+                            input#restaurant(type='text' required='')
+                        .registerInput
+                            label(for='email')
+                                | Email
+                                span.required *
+                            br
+                            input#email(type='text' required='')
+                        .registerInput
+                            label(for='phone')
+                                | Phone
+                                span.required *
+                            br
+                            input#phone(type='text' required='')
+                        .registerInput
+                            label(for='textarea') Comments
+                            br
+                            textarea#textarea(name='textarea' cols='30' rows='10')
+                        button.submitForm Submit
+        // Modal finish
+        // Home start
+        #home
+            .restaurantHead.container
+                h2 Make more people happy with your tasty foods.
+            .home-middle
+                h2 HOW IT WORKS
+                .workingMethods
+                    .method
+                        h1 1
+                        .line
+                        h5 Plan Your Expansion
+                        p We&apos;ll identify where demand for your food is highest
+                    .method
+                        h1 2
+                        .line
+                        h5
+                            | Choice the Business Partnership Plan you would like to have for
+                            | your expansion
+                        p
+                            | Franchising Model
+                            br
+                            |                             Royalty Model
+                    .method
+                        h1 3
+                        .line
+                        h5 Start Serving to new markets and customers
+                        p
+                            | Use Food Lab-operated delivery kitchens to grow. We&apos;ll manage
+                            | all the details &mdash; from kitchen setup and staffing to operations
+                            | and marketing.
+                    .method
+                        h1 4
+                        .line
+                        h5 Observe the growth of your food Empire
+                        p
+                            | By having more locations within in just one year value of your
+                            | brand will be tripled.
+            .home-bottom
+                .container
+                    h2 IMAGINE YOUR RESTAURANT ON EVERY BLOCK
+                    .advantages.container
+                        .advantage.centerImg
+                            img(src='img/advantage1.svg' height='100' alt='photo')
+                            div
+                                h3 Feed your biggest Fan
+                            p
+                                | Food Lab&rsquo;s proprietary geoscoring and market analyses identify which neighborhoods crave
+                                | your cooking most.
+                        .advantage.centerImg
+                            img(src='img/advantage2.svg' height='100' alt='photo')
+                            div
+                                h3
+                                    | Gain the power of proximity.
+                            p
+                                | Our delivery kitchens are strategically placed in lively neighborhoods, enabling faster
+                                | delivery of fresher food to more customers
+            h2.test Give us a few details about you
+            form.businessRestaurantForm
+                .container
+                    .propertyForm-left
+                        .propertyInput
+                            label
+                                | Your Name:
+                                span.required *
+                            br
+                            input#name(type='text' placeholder='name' required='')
+                        .propertyInput
+                            label
+                                | Your Brand Name:
+                                span.required *
+                            br
+                            input#brand_name(type='text' placeholder='Brand Name' required='')
+                        .propertyInput
+                            label
+                                | Job Title:
+                                span.required *
+                            br
+                            select#job.left-select(required='')
+                                option(value='Job Title') Job Title
+                                option(value='Owner') Owner
+                                option(value='Manager') Manager
+                        .propertyInput
+                            label
+                                | Your Phone Number:
+                                span.required *
+                            br
+                            input#phone_number(type='text' placeholder='Phone Number' required='')
+                    .propertyForm-right
+                        .propertyInput
+                            label
+                                | Your Property Details:
+                                span.required *
+                            br
+                            input#property_details(type='text' placeholder='Property Details' required='')
+                        .propertyInput
+                            label
+                                | Your Email:
+                                span.required *
+                            br
+                            input#business_email(type='text' placeholder='Email' required='')
+                        .propertyInput
+                            label
+                                | Number of Employees:
+                                span.required *
+                            br
+                            input#employeeNum(type='text' required='')
+                        .propertyInput
+                            label
+                                | Expansion Goal:
+                                span.required *
+                            br
+                            select#goal(required='')
+                                option(value='city_centre') City Centre
+                                option(value='metro_stations') Metro Stations
+                                option(value='sea_side') Sea Side
+                                option(value='xirdalan_masazir') Xirdalan/Masazir
+                                option(value='xetai') Xetai rayon (Ahmadli,Neftciler etc)
+                        button(type='submit') Submit

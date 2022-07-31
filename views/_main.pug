@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        block head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='../public/styles/bootstrap.css')
+        link(rel='stylesheet' href='../public/styles/style.css')
+        // Fontawesome
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css')
+        title FoodLab | #{title}
+
+    body
+        //Header
+        include _header
+
+        //Content
+        block content
+            h1 This is a placeholder heading
+
+        //Footer
+        include _footer
+
+        script(src='../public/js/bundle.js',defer)
+        script(src='../public/js/bootstrap.js')
+        script(src='../public/js/home/home.js')
+        script(src='../public/js/price/price.js')
+        script(src='../public/js/virtualForm/form.js')
+

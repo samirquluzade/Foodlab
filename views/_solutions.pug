@@ -1,0 +1,852 @@
+extends _main
+
+block content
+
+    main(style='margin-top: 20px;')
+        // Modal start
+        #modalComment.modalComment.container.col-11
+            .row
+                .modal-left.col-md-5
+                    img(src='img/contact.png' alt='photo' width='300')
+                    .contactInfo
+                        .icons
+                            .icon
+                                div
+                                    img(src='img/document.png' alt='photo' width='50')
+                                .aboutIcon
+                                    p Fill out request.
+                            .icon
+                                div
+                                    img(src='img/receive-mail.png' alt='photo' width='50')
+                                div
+                                    p Get an email from us with a guide
+                            .icon
+                                div
+                                    img(src='img/idea.png' alt='photo' width='50')
+                                div
+                                    p Write suggestions and comments
+                .modal-right.col-11.col-sm-12.col-md-6
+                    h2 Registration
+                    img#close(src='img/close.png' alt='photo' width='18')
+                    form
+                        .registerInput
+                            label(for='restaurant')
+                                | Brand name
+                                span.required *
+                            br
+                            input#restaurant(type='text' required='')
+                        .registerInput
+                            label(for='email')
+                                | Email
+                                span.required *
+                            br
+                            input#email(type='text' required='')
+                        .registerInput
+                            label(for='phone')
+                                | Phone
+                                span.required *
+                            br
+                            input#phone(type='text' required='')
+                        .registerInput
+                            label(for='textarea') Comments
+                            br
+                            textarea#textarea(name='textarea' cols='30' rows='10')
+                        button.submitForm Submit
+        #home
+            .homeHeader.homeVirtual.container
+                h2.solutionHead Smart solutions for Businesses
+                p
+                    | Food Lab offers a wide range of services, which cover all channels that business  needs to communicate with their guests: a digital menu, a website for pick up and delivery, table reservations, QR payments, table ordering, and much more.
+            .home-middle
+                h2 HOW IT WORKS
+                .workingMethods
+                    .method
+                        h1 1
+                        .line
+                        h5 POS system for the restaurants
+                        p
+                            | With our Smart POS system can save you time and money, and it can help you increase sales.
+                    .method
+                        h1 2
+                        .line
+                        h5 Delivery &amp; Takeaway
+                        p
+                            | Launch your delivery website&amp; app with up to 30% more orders and no commission on orders.
+                    .method
+                        h1 3
+                        .line
+                        h5 QR Pay
+                        p
+                            | Easy and secure way to increase gratuity up to 20% and lower the workload of your staff by 30%
+                    .method
+                        h1 4
+                        .line
+                        h5 Contactless Menu for your Business
+                        p
+                            | Unlike PDF, contactless menus have interactive elements. Guests can see your working hours, contacts, Wi-Fi password,
+                    .method
+                        h1 5
+                        .line
+                        h5 Customer Feedback
+                        p
+                            | Collect all guest reviews from your business, Improve service and treat negative reviews before they appear on the web.
+        .bg-solutions
+            .container
+                // Modal finish
+                h2 Pricing for HoReca solution
+                // Radio start
+                .suggestion.d-flex
+                    #radio-first.suggestion-radio(onclick='monthly()')
+                        input#radio1.radio(type='radio' name='radio' checked='')
+                        label(for='radio1') Monthly
+                    #radio-second.suggestion-radio(onclick='getDiscount()')
+                        input#radio2.radio(type='radio' name='radio')
+                        label(for='radio2')
+                            | Annually
+                            span (save 20%)
+                // Radio finish
+                .table
+                    table
+                        thead
+                            tr
+                                th
+                                th
+                                    h3 Basic
+                                    p.save Pay annual, pay less
+                                    p.moneyAmount1
+                                        span.value 25
+                                        | &#x20BC; / month
+                                    button(onclick='openModal()') Try it for free
+                                th
+                                    h3 Standart
+                                    p.save Pay annual, pay less
+                                    p.moneyAmount2
+                                        span.value 50
+                                        | &#x20BC; / month
+                                    button(onclick='openModal()') Try it for free
+                                th(style='position: relative; border: 1.5px solid #03a8c9;')
+                                    p.popular Popular
+                                    h3 Smart
+                                    p.save Pay annual, pay less
+                                    p.moneyAmount3
+                                        span.value 100
+                                        | &#x20BC; / month
+                                    button(onclick='openModal()') Try it for free
+                                th
+                                    h3 Premium
+                                    p.save Pay annual, pay less
+                                    p.moneyAmount4
+                                        span.value 150
+                                        | &#x20BC; / month
+                                    button(onclick='openModal()') Try it for free
+                        tbody
+                            tr
+                                td Contactless menu with unlimited categories and dishes
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td QR payments at the table
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td
+                                    | Advanced menu settings (photo, video, allergens, kcal and much
+                                    | more)
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Multilingual menu (manual translation)
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Online menu editing
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Features &ldquo;Happy Hours&rdquo; and &ldquo;Business Lunch&rdquo;
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Tools for receiving and processing customer feedback
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Wishlist in the digital menu card
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Promo banners
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Analytics settings (Facebook Pixel / Google Analytics)
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Delivery &amp; Pickup website
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td App for receiving orders (IOS, Android)
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td
+                                    | Online / Offline payments (credit cards / Apple Pay / Google
+                                    | Pay)
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Contactless QR table ordering / room service
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Tips setting
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Real time order status for your clients
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Integrations with taxi &amp; couriers services
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td App for your couriers
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Table reservation
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Recommendations for dishes
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Advanced client database CRM
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td POS terminal integrations
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Open API for external integrations with your services
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Feature &ldquo;Restaurant and hotel chain&rdquo;
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Feature &ldquo;White Label&rdquo;
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Order status notifications
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td App for your guests
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Own domain
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Auto-translation in 99 languages of your menu
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                            tr
+                                td Dedicated support manager 24/7
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.check-un.centerTable
+                                    img(src='img/checked-un.png' alt='tick' width='25')
+                                td.centerTable
+                                    img(src='img/check.png' alt='tick' width='25')
+                .mobile-version
+                    .price.col-12
+                        .price-main
+                            .price-top
+                                h3 Basic
+                                p.save Pay annual, pay less
+                                p.moneyAmount1 25&#x20BC; / month
+                                button.buttonTry(onclick='openModal()') Try it for free
+                            div
+                                .price-feature.d-flex
+                                    p
+                                        | Contactless menu with unlimited categories and dishes
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | QR payments at the table
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Advanced menu settings (photo, video, allergens, kcal and much more)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Multilingual menu (manual translation)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Online menu editing
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Features &ldquo;Happy Hours&rdquo; and &ldquo;Business Lunch&rdquo;
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Tools for receiving and processing customer feedback
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Wishlist in the digital menu card
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Promo banners
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Analytics settings (Facebook Pixel / Google Analytics)
+                                        img(src='img/check.png' alt='true' width='20')
+                    .price.col-12
+                        .price-main
+                            .price-top
+                                h3 Standart
+                                p.save Pay annual, pay less
+                                p.moneyAmount2 50&#x20BC; / month
+                                button.buttonTry(onclick='openModal()')
+                                    | Try it for free
+                            div
+                                .price-feature.d-flex
+                                    p
+                                        | Contactless menu with unlimited categories and dishes
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | QR payments at the table
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Advanced menu settings (photo, video, allergens, kcal and much more)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Multilingual menu (manual translation)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Online menu editing
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Features &ldquo;Happy Hours&rdquo; and &ldquo;Business Lunch&rdquo;
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Tools for receiving and processing customer feedback
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Wishlist in the digital menu card
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Promo banners
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Analytics settings (Facebook Pixel / Google Analytics)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Delivery &amp; Pickup website
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | App for receiving orders (IOS, Android)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Online / Offline payments (credit cards / Apple Pay / Google Pay)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Contactless QR table ordering / room service
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Tips setting
+                                        img(src='img/check.png' alt='true' width='20')
+                    .price.col-12
+                        .price-main
+                            .price-top
+                                h3 Smart
+                                p.save Pay annual, pay less
+                                p.moneyAmount3 100&#x20BC; / month
+                                button.buttonTry(onclick='openModal()') Try it for free
+                            div
+                                .price-feature.d-flex
+                                    p
+                                        | Contactless menu with unlimited categories and dishes
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | QR payments at the table
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Advanced menu settings (photo, video, allergens, kcal and much more)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Multilingual menu (manual translation)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Online menu editing
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Features &ldquo;Happy Hours&rdquo; and &ldquo;Business Lunch&rdquo;
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Tools for receiving and processing customer feedback
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Wishlist in the digital menu card
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Promo banners
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Analytics settings (Facebook Pixel / Google Analytics)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Delivery &amp; Pickup website
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | App for receiving orders (IOS, Android)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Online / Offline payments (credit cards / Apple Pay / Google Pay)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Contactless QR table ordering / room service
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Tips setting
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Real time order status for your clients
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Integrations with taxi &amp; couriers services
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | App for your couriers
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Table reservation
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Recommendations for dishes
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Advanced client database CRM
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | POS terminal integrations
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Open API for external integrations with your services
+                                        img(src='img/check.png' alt='true' width='20')
+                    .price.col-12
+                        .price-main
+                            .price-top
+                                h3 Premium
+                                p.save Pay annual, pay less
+                                p.moneyAmount4 150&#x20BC; / month
+                                button.buttonTry(onclick='openModal()') Try it for free
+                            div
+                                .price-feature.d-flex
+                                    p
+                                        | Contactless menu with unlimited categories and dishes
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | QR payments at the table
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Advanced menu settings (photo, video, allergens, kcal and much more)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Multilingual menu (manual translation)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Online menu editing
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Features &ldquo;Happy Hours&rdquo; and &ldquo;Business Lunch&rdquo;
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Tools for receiving and processing customer feedback
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Wishlist in the digital menu card
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Promo banners
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Analytics settings (Facebook Pixel / Google Analytics)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Delivery &amp; Pickup website
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | App for receiving orders (IOS, Android)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Online / Offline payments (credit cards / Apple Pay / Google Pay)
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Contactless QR table ordering / room service
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Tips setting
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Real time order status for your clients
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Integrations with taxi &amp; couriers services
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | App for your couriers
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Table reservation
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Recommendations for dishes
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Advanced client database CRM
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | POS terminal integrations
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Open API for external integrations with your services
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Feature &ldquo;Restaurant and hotel chain&rdquo;
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Feature &ldquo;White Label&rdquo;
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Order status notifications
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | App for your guests
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Own domain
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Auto-translation in 99 languages of your menu
+                                        img(src='img/check.png' alt='true' width='20')
+                                .price-feature.d-flex
+                                    p
+                                        | Dedicated support manager 24/7
+                                        img(src='img/check.png' alt='true' width='20')
+        form.propertyForm
+            h2 Give us a few details about you
+            .container
+                .propertyForm-left
+                    .propertyInput
+                        label
+                            | Your Brand Name:
+                            span.required *
+                        br
+                        input(type='text' placeholder='Brand Name' required='')
+                    .propertyInput
+                        label
+                            | Restaurant/Store or Hotel Name:
+                            span.required *
+                        br
+                        input(type='text' placeholder='Phone Number' required='')
+                    .propertyInput
+                        label
+                            | Payment method:
+                            span.required *
+                        br
+                        select(required='')
+                            option(value='Basic') Basic
+                            option(value='Standart') Standart
+                            option(value='Smart') Smart
+                            option(value='Premium') Premium
+                    .propertyInput
+                        label
+                            | Name:
+                            span.required *
+                        br
+                        input(type='text' placeholder='Name' required='')
+                .propertyForm-right
+                    .propertyInput
+                        label
+                            | Payment method:
+                            span.required *
+                        br
+                        select(required='')
+                            option(value='Monthly') Monthly
+                            option(value='Yearly') Yearly
+                    .propertyInput
+                        label
+                            | Phone Number:
+                            span.required *
+                        br
+                        input(type='text' placeholder='Phone Number' required='')
+                    .propertyInput
+                        label
+                            | Email:
+                            span.required *
+                        br
+                        input(type='text' placeholder='Email' required='')
+                    .propertyInput
+                        label
+                            | Comment:
+                            span.required *
+                        br
+                        input(type='text' placeholder='Comment' required='')
+                    button(type='submit') Submit

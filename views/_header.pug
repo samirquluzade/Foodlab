@@ -1,0 +1,53 @@
+header
+    .container.container-fixer
+        nav
+            .link
+                // Logo Start
+                img#burger(src='img/menu.png' alt='menu' width='30')
+                .logo
+                    a#homeBtn(href='/')
+                        img#logo-img(src='img/logo.png' alt='photo' width='150')
+                // Logo Finish
+                // Nav Links start
+                .nav-links
+                    ul.links
+                        a(href='/about')
+                            li About Us
+                        .dropdown.dropdownPrice
+                            button.dropbtn For Real Estate
+                            img(src='img/arrow-down.png' alt='photo' width='10')
+                            .dropdown-content.dropdown-list
+                                a(href='/property') Enroll Your Property
+                                a(href='/enrollKitchen') Enroll Your Kitchen
+                        .dropdown.dropdownPrice
+                            button.dropbtn For Business
+                            img(src='img/arrow-down.png' alt='photo' width='10')
+                            .dropdown-content.dropdown-list
+                                a(href='/restaurant') Restaurant
+                                a(href='/store') Store
+                        dl
+                            dt For Real Estate
+                            dd
+                                a(href='/property') Enroll Your Property
+                            dd
+                                a(href='/enrollKitchen') Enroll Your Kitchen
+                        dl
+                            dt For Business
+                            dd
+                                a(href='/restaurant') Restaurant
+                            dd
+                                a(href='/store') Store
+                        a(href='/solutions')
+                            li IT Solutions
+                        //a(href='#')
+                        //    li Partners
+                // Nav Links start
+            div
+                .lang
+                    .dropdown
+                        button.dropbtn en
+                        img(src='img/arrow-down.png' alt='photo' width='10')
+                        .dropdown-content
+                            a(onclick='changeAz()') az
+                            a(onclick='changeRu()') ru
+                    button#comments Contact Us

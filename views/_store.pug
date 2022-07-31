@@ -1,0 +1,168 @@
+extends _main
+
+block content
+
+    main
+        // Modal start
+        #modalComment.modalComment.container.col-11
+            .row
+                .modal-left.col-md-5
+                    img(src='img/contact.png' alt='photo' width='300')
+                    .contactInfo
+                        .icons
+                            .icon
+                                div
+                                    img(src='img/document.png' alt='photo' width='50')
+                                .aboutIcon
+                                    p Fill out request.
+                            .icon
+                                div
+                                    img(src='img/receive-mail.png' alt='photo' width='50')
+                                div
+                                    p Get an email from us with a guide
+                            .icon
+                                div
+                                    img(src='img/idea.png' alt='photo' width='50')
+                                div
+                                    p Write suggestions and comments
+                .modal-right.col-sm-12.col-11.col-md-6
+                    h2 Registration
+                    img#close(src='img/close.png' alt='photo' width='18')
+                    form
+                        .registerInput
+                            label(for='restaurant')
+                                | Brand name
+                                span.required *
+                            br
+                            input#restaurant(type='text' required='')
+                        .registerInput
+                            label(for='email')
+                                | Email
+                                span.required *
+                            br
+                            input#email(type='text' required='')
+                        .registerInput
+                            label(for='phone')
+                                | Phone
+                                span.required *
+                            br
+                            input#phone(type='text' required='')
+                        .registerInput
+                            label(for='textarea') Comments
+                            br
+                            textarea#textarea(name='textarea' cols='30' rows='10')
+                        button.submitForm Submit
+        // Modal finish
+        // Home start
+        #home
+            .storeHead.container
+                h2.storeHead BRING YOUR BRAND TO EVERY BLOCK
+                p
+                    | Use our retail distribution network to effortlessly expand into new
+                    | markets and deliver faster than ever before. Now that&rsquo;s quick
+                    | commerce.
+            .home-middle
+                h2 HOW IT WORKS
+                .workingMethods
+                    .method.store
+                        h1 1
+                        .line
+                        h5 Join our Proximity Network
+                    .method.store
+                        h1 2
+                        .line
+                        h5
+                            | Expand Your Brand
+                    .method.store
+                        h1 3
+                        .line
+                        h5 Scale with minimal overhead
+            div(style='background-color: white;')
+                .storeSection
+                    h2.storeHeading Ways to Work with US
+                    p
+                        | Your retail business, your rules. Pick the partnership model that best aligns with your business goals
+                    .storeWay
+                        div
+                            p 1
+                        div
+                            h3 Food Lab Dark Shops
+                            p
+                                | We will host ur products in our dark stores for the online orders and you will pay only for  single agency fee that includes (rent, employee, utilities etc costs)
+                    .storeWay
+                        div
+                            p 2
+                        div
+                            h3 Food Lab Store
+                            p
+                                | Your products in our storefronts. Seed new markets&mdash;and make more sales. We&rsquo;ll stock your products across our direct-to-consumer stores.
+                    .storeWay
+                        div
+                            p 3
+                        div
+                            h3
+                                | Brand Shops
+                            p
+                                | Our storefronts, managed by us. Provide us with bulk inventory and your brand guidelines. We&rsquo;ll also create digital storefronts and support e-commerce sales on your behalf. Our  national agreements with major delivery apps give us the power to move stock quickly.
+            h2.test Give us a few details about you
+            form.businessStoreForm
+                .container
+                    .propertyForm-left
+                        .propertyInput
+                            label
+                                | Your Name:
+                                span.required *
+                            br
+                            input#name(type='text' placeholder='name' required='')
+                        .propertyInput
+                            label
+                                | Your Brand Name:
+                                span.required *
+                            br
+                            input#brand_name(type='text' placeholder='Brand Name' required='')
+                        .propertyInput
+                            label
+                                | Job Title:
+                                span.required *
+                            br
+                            select#job.left-select(required='')
+                                option(value='Job Title') Job Title
+                                option(value='Owner') Owner
+                                option(value='Manager') Manager
+                        .propertyInput
+                            label
+                                | Your Phone Number:
+                                span.required *
+                            br
+                            input#phone_number(type='text' placeholder='Phone Number' required='')
+                    .propertyForm-right
+                        .propertyInput
+                            label
+                                | Your Property Details:
+                                span.required *
+                            br
+                            input#property_details(type='text' placeholder='Property Details' required='')
+                        .propertyInput
+                            label
+                                | Your Email:
+                                span.required *
+                            br
+                            input#business_email(type='text' placeholder='Email' required='')
+                        .propertyInput
+                            label
+                                | Number of Employees:
+                                span.required *
+                            br
+                            input#employeeNum(type='text' required='')
+                        .propertyInput
+                            label
+                                | Expansion Goal:
+                                span.required *
+                            br
+                            select#goal(required='')
+                                option(value='city_centre') City Centre
+                                option(value='metro_stations') Metro Stations
+                                option(value='sea_side') Sea Side
+                                option(value='xirdalan_masazir') Xirdalan/Masazir
+                                option(value='xetai') Xetai rayon (Ahmadli,Neftciler etc)
+                        button(type='submit') Submit

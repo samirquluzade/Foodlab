@@ -1,0 +1,41 @@
+{
+  "name": "foodlab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "watch:js": "parcel watch public/js/main.js --out-dir ./public/js --out-file bundle.js public-url",
+    "build:js": "parcel build public/js/main.js --out-dir ./public/js --out-file bundle.js public-url"
+  },
+  "keywords": [],
+  "author": "Samir Guluzada",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.18.6",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.6",
+    "nodemon": "^2.0.18",
+    "parcel": "^2.6.2",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "requirejs": "^2.3.6",
+    "sequelize": "^6.21.2",
+    "sequelize-cli": "^6.4.1",
+    "sweetalert2": "^11.4.20"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-core": "^6.26.3",
+    "parcel-bundler": "^1.12.5"
+  }
+}
