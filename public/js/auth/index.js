@@ -1,6 +1,5 @@
 import axios from "axios";
 import {successAlert,errorAlert} from "../alerts.js";
-import User from '../../../models/User.js';
 
 export const signUp = async(username,password) => {
     try{
@@ -23,12 +22,7 @@ export const login = async(username,password) => {
         const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/users/login`,{
             username,password
         });
-        if(res.data.success === "success"){
-            successAlert("success","Uğurla daxil olundu");
-            window.setTimeout(() => {
-                location.assign("/");
-            },1500);
-        }
+        return res;
     }
     catch (err){
         errorAlert("error","İstifadəçi adı və ya şifrə səhvdir.Yenidən cəhd edin!");
@@ -39,14 +33,20 @@ export const login = async(username,password) => {
 }
 export const logout = async () => {
     try {
-        const res = await axios.get(`http://127.0.0.1:${process.env.PORT}/users/logout`);
-        if (res.data.status === "success") {
-            successAlert("success", "Uğurla hesabdan çıxıldı!");
-            window.setTimeout(() => {
-                location.assign("/");
-            }, 1500);
-        }
+        const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/users/logout`);
+        return res;
     } catch (err) {
         errorAlert("error", "Hesabdan çıxarkən xəta baş verdi. Yenidən cəhd edin!");
     }
 };
+// export const deleteId = async (id,value) => {
+//     try{
+//         const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/${id}`,{
+//             value
+//         });
+//         return res;
+//     }
+//     catch (err) {
+//         errorAlert("error", "Silinmədi. Yenidən cəhd edin!");
+//     }
+// }

@@ -1,14 +1,14 @@
 const nodemailer = require('nodemailer');
-const {errorAlert,successAlert} = require("../public/js/alerts");
+const smtpTransport = require('nodemailer-smtp-transport');
 async function sendMail(message){
-    let transporter = nodemailer.createTransport({
-        host: "smtp.mailtrap.io",
-        port: 2525,
+    let transporter = nodemailer.createTransport(smtpTransport({
+        service: 'gmail',
+        host: 'smtp.gmail.com',
         auth: {
-            user: "0a18d983319b1b",
-            pass: "d662470ec43f61"
+            user: "vabiss.test@gmail.com",
+            pass: "Samir12345!"
         }
-    });
+    }));
     return new Promise((resolve,reject) => {
         transporter.sendMail(message,(err,info) => {
             if(err) return reject(err)

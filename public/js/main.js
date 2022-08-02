@@ -3,9 +3,11 @@ import {
   kitchenOperations,
   modalOperations,
   propertyOperations,
-  solutionsOperations
+  solutionsOperations,
 } from "./modals/index";
 import {successAlert,errorAlert} from "./alerts.js";
+import {login, logout} from "./auth";
+// import {login,logout,signup,deleteId} from "./auth/index";
 
 const comment = document.getElementById("comments");
 const comments = document.getElementsByClassName("comments");
@@ -18,13 +20,27 @@ const solutionsForm = document.querySelector(".solutionsForm");
 const closeModal = document.getElementById("close");
 const modal = document.getElementById("modalComment");
 const contactDataForm = document.querySelector(".contact-data");
+const loginForm = document.querySelector(".form-login-data");
 const body = document.querySelector("body");
 const navbar = document.querySelector("header");
 const logo = document.querySelector(".logo");
 const burger = document.querySelector("#burger");
 const navlinks = document.querySelector(".links");
 const form = document.querySelector('form');
-
+const logoutAdmin = document.querySelector('.logout');
+//
+if(logoutAdmin){
+  logoutAdmin.addEventListener("click",e => {
+    e.preventDefault();
+    const log = logout();
+    if(log){
+      successAlert("success","Hesabdan çıxıldı");
+      window.setTimeout(() => {
+        location.assign("/login");
+      },1500);
+    }
+  });
+}
 // Modal close
 closeModal.addEventListener("click", () => {
   body.classList.remove("popup");
@@ -62,10 +78,41 @@ if(contactDataForm){
         document.getElementById("textarea").value = "";
       }
     }
-
   });
 }
-
+if(loginForm){
+  loginForm.addEventListener("submit",async(e) => {
+    e.preventDefault();
+    const email = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const data = await login(email,password);
+      if(data.data.status === "success"){
+        successAlert("success","Uğurla daxil olundu");
+        window.setTimeout(() => {
+          location.assign("/dashboard");
+        },1500);
+      }
+      else
+      {
+        errorAlert("error","İstifadəçi adı və ya şifrə səhvdir");
+      }
+  })
+}
+  // document.getElementById("btnLogin").addEventListener("click",e => {
+  //   console.log('test');
+  //   e.preventDefault();
+  //   const email = document.getElementById("username").value;
+  //   const password = document.getElementById("password").value;
+  //   console.log(email);
+  //   // const data = await login(email,password);
+  //   // // console.log(data);
+  //   // if(data.status === 200){
+  //   //   successAlert("success","Uğurla daxil olundu");
+  //   //   window.setTimeout(() => {
+  //   //     location.assign("/");
+  //   //   },1500);
+  //   // }
+  // });
 
 if(property){
   property.addEventListener("submit",async (e) => {
@@ -292,6 +339,7 @@ if(solutionsForm){
     }
   });
 }
+
 // When click outside modal close modal
 document.addEventListener("click", function (e) {
   if (modal.classList.contains("clicked")) {
@@ -370,6 +418,23 @@ window.addEventListener("resize", () => {
 const goTop = () => {
   window.scrollTo({top:0})
 }
+
+// for(let i = 0; i< deleteItem.length;i++){
+//   deleteItem[i].addEventListener("click",async function(){
+//     console.log('test');
+//     const id = await deleteId(this.id,this.value);
+//     if(id.status === 201){
+//       successAlert("success","Silindi");
+//     }
+//   })
+// }
+
+// const deleteItem = async(id) => {
+//   const deleted = deleteItemId(id);
+//   if(deleted){
+//     successAlert("success","Silindi!");
+//   }
+// }
 
 //Validate email
 

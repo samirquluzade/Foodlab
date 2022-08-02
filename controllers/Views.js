@@ -3,6 +3,7 @@ const db = require("../models");
 const sendMail = require("../utils/email.js");
 
 const getHome = catchAsync(async(req,res,next) => {
+    console.log(req.cookies);
     return res.status(200).render("_home",{
         title: "Home"
     });
@@ -38,6 +39,75 @@ const getStore = catchAsync(async(req,res,next) => {
         title: "Store"
     });
 });
+const getLogin = catchAsync(async(req,res,next) => {
+    return res.status(200).render("_login",{
+        title: "Login"
+    });
+});
+const getDashboard = catchAsync(async(req,res,next) => {
+    const contact_data = await db.Restaurants.findAll({
+        where: {},
+        raw: true,
+        order: [['id','DESC']]
+    });
+    const kitchen = await db.Kitchen.findAll({
+        where: {},
+        raw: true,
+        order: [['id','DESC']]
+    });
+    const business_restaurant = await db.Business_Restaurant.findAll({
+        where: {},
+        raw: true,
+        order: [['id','DESC']]
+    });
+    const property = await db.Property.findAll({
+        where: {},
+        raw: true,
+        order: [['id','DESC']]
+    });
+    const solutions = await db.Solutions.findAll({
+        where: {},
+        raw: true,
+        order: [['id','DESC']]
+    });
+    return res.status(200).render("_dashboard",{
+        title: "Dashboard",
+        contact: contact_data,
+        kitchen: kitchen,
+        business: business_restaurant,
+        property: property,
+        solutions: solutions
+    });
+});
+// const deleteItemId = catchAsync(async(req,res,next) => {
+//     const {value} = req.body;
+//     const {id} = req.params;
+//     if(value === "solutions"){
+//         await db.Solutions.destroy({
+//             where: {id}
+//         })
+//     }
+//     else if(value === "contact"){
+//         await db.Restaurant.destroy({
+//             where: {id}
+//         })
+//     }
+//     else if(value === "kitchen"){
+//         await db.Kitchen.destroy({
+//             where: {id}
+//         })
+//     }
+//     else if(value === "business"){
+//         await db.Business_Restaurant.destroy({
+//             where: {id}
+//         })
+//     }
+//     else if(value === "property"){
+//         await db.Property.destroy({
+//             where: {id}
+//         })
+//     }
+// })
 const addRestaurantComment = catchAsync(async(req,res,next) => {
     const {restaurant_name,email,phone_number,comments} = req.body;
     if (!restaurant_name || !email || !phone_number) {
@@ -256,14 +326,6 @@ const addSolutionsComment = catchAsync(async(req,res,next) => {
             error: 'Please provide name,brand_name,brand_number,email,phone_number,method,pay method and comment'
         })
     }
-    console.log(name);
-    console.log(brand_name);
-    console.log(brand_number);
-    console.log(method);
-    console.log(email);
-    console.log(phone_number);
-    console.log(pay_method);
-    console.log(comment);
     const data = (await db.Solutions.create({
         name,
         brand_name,
@@ -313,5 +375,5 @@ const addSolutionsComment = catchAsync(async(req,res,next) => {
         })
     }
 });
-module.exports = {getHome,getSolutions,getRestaurant,getAbout,getStore,getProperty,addRestaurantComment,getEnrollKitchen,addPropertyComment,addEnrollKitchen,addBusinessComment,addSolutionsComment};
+module.exports = {getHome,getSolutions,getRestaurant,getAbout,getStore,getProperty,getLogin,getDashboard,addRestaurantComment,getEnrollKitchen,addPropertyComment,addEnrollKitchen,addBusinessComment,addSolutionsComment};
 
