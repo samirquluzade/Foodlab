@@ -2,7 +2,7 @@ extends _main
 
 block content
 
-    main
+    main.propertyMain
         // Modal start
         #modalComment.modalComment.container.col-11
             .row
@@ -55,8 +55,9 @@ block content
         // Modal finish
         // Home start
         #home
-            .restaurantHead.container
-                h2 Make more people happy with your tasty foods.
+            .restaurantHead
+                .container
+                    h2 Make more people happy with your tasty foods.
             .home-middle
                 h2 HOW IT WORKS
                 .workingMethods
@@ -158,7 +159,7 @@ block content
                                 | Number of Employees:
                                 span.required *
                             br
-                            input#employeeNum(type='text' required='')
+                            input#employeeNum(type='text' required='' placeholder='1..2..3')
                         .propertyInput
                             label
                                 | Expansion Goal:

@@ -405,7 +405,6 @@ const openModal = () => {
 
 // Burger menu
 burger.addEventListener("click", () => {
-  console.log("object");
   navlinks.classList.toggle("openBurger");
 });
 

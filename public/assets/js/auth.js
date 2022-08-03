@@ -16,7 +16,6 @@ export const signup = async(username,password) => {
     }
 }
 export const login = async(username,password) => {
-    console.log(username,password);
     try{
         const res = await axios.post('http:127.0.0.1:3000/users/login',{
             username,password

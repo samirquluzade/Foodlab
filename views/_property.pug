@@ -2,7 +2,7 @@ extends _main
 
 block content
 
-    main
+    main.propertyMain
         // Modal start
         #modalComment.modalComment.container.col-11
             .row
@@ -55,10 +55,11 @@ block content
         // Modal finish
         // Home start
         #home
-            .homeHeader.homeVirtual.container
-                h2.propertyHeader
-                    | Enjoy the value of every square foot by hosting business in your
-                    | neighbourhood. Become a hub for the business.
+            .homeProperty
+                .container
+                    h2
+                        | Enjoy the value of every square foot by hosting business in your
+                        | neighbourhood. Become a hub for the business.
             .home-middle
                 h2 HOW IT WORKS
                 .workingMethods
@@ -127,7 +128,7 @@ block content
                                 | Your Name:
                                 span.required *
                             br
-                            input#name(type='text' placeholder='name')
+                            input#name(type='text' placeholder='Name')
                         .propertyInput
                             label
                                 | Your Phone Number:

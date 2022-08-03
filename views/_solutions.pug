@@ -2,7 +2,7 @@ extends _main
 
 block content
 
-    main(style='margin-top: 20px;')
+    main.propertyMain
         // Modal start
         #modalComment.modalComment.container.col-11
             .row
@@ -52,11 +52,12 @@ block content
                             br
                             textarea#textarea(name='textarea' cols='30' rows='10')
                         button.submitForm Submit
-        #home
-            .homeHeader.homeVirtual.container
-                h2.solutionHead Smart solutions for Businesses
-                p
-                    | Food Lab offers a wide range of services, which cover all channels that business  needs to communicate with their guests: a digital menu, a website for pick up and delivery, table reservations, QR payments, table ordering, and much more.
+        #paz
+            .solutionsHeader
+                .container
+                    h2 Smart solutions for Businesses
+                    p
+                        | Food Lab offers a wide range of services, which cover all channels that business  needs to communicate with their guests: a digital menu, a website for pick up and delivery, table reservations, QR payments, table ordering, and much more.
             .home-middle
                 h2 HOW IT WORKS
                 .workingMethods

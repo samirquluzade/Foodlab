@@ -2,7 +2,7 @@ extends _main
 
 block content
 
-    main
+    main.propertyMain
         // Modal start
         #modalComment.modalComment.container.col-11
             .row
@@ -55,12 +55,13 @@ block content
         // Modal finish
         // Home start
         #home
-            .storeHead.container
-                h2.storeHead BRING YOUR BRAND TO EVERY BLOCK
-                p
-                    | Use our retail distribution network to effortlessly expand into new
-                    | markets and deliver faster than ever before. Now that&rsquo;s quick
-                    | commerce.
+            .storeHead
+                .container
+                    h2 BRING YOUR BRAND TO EVERY BLOCK
+                    p
+                        | Use our retail distribution network to effortlessly expand into new
+                        | markets and deliver faster than ever before. Now that&rsquo;s quick
+                        | commerce.
             .home-middle
                 h2 HOW IT WORKS
                 .workingMethods
@@ -153,7 +154,7 @@ block content
                                 | Number of Employees:
                                 span.required *
                             br
-                            input#employeeNum(type='text' required='')
+                            input#employeeNum(type='text' required='' placeholder='1..2..3')
                         .propertyInput
                             label
                                 | Expansion Goal:

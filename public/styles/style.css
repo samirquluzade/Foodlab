@@ -315,6 +315,10 @@ main {
   height: 100%;
 }
 
+.propertyMain{
+  padding-top: 0!important;
+}
+
 /* Main */
 /* !Index */
 main {
@@ -444,19 +448,29 @@ main>h2 {
   font-size: 40px;
 }
 
-.homeAbout::before {
-  content: "";
-  background: #b7b7b7 url(../img/about-us.jpg);
-  background-position: center;
+.homeLeft{
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.homeLeftText{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.homeAbout{
+  background: rgba(0, 0, 0, .5) url(../img/AboutUs.jpg);
+  background-position: top;
   background-size: cover;
   background-blend-mode: darken;
-  opacity: 0.3;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 60px;
 }
 
 /* !Restaurant */
@@ -515,7 +529,6 @@ main>h2 {
   background-color: black;
   color: white;
   text-align: center;
-  margin-top: 10px;
 }
 
 .workingMethods {
@@ -829,11 +842,10 @@ main>h2 {
 
 /* !Store */
 .storeHead{
-  background: rgba(0, 0, 0, .5) url(../img/Dark\ Store.jpg);
+  background: rgba(0, 0, 0, .5) url(../img/DarkStore.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  background-attachment: fixed;
   color: white;
   height: 100vh;
   display: flex;
@@ -857,11 +869,10 @@ main>h2 {
 
 /* !Solutions */
 .solutionsHeader {
-  background: rgba(0, 0, 0, 0.6) url(../img/IT\ Solution.jpg);
+  background: rgba(0, 0, 0, 0.6) url(../img/ITSolution.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -911,54 +922,68 @@ main>h2 {
   margin-bottom: 30px;
 }
 
-.homeProperty h2{
-  font-size: 40px;
+.homeProperty {
+  background: rgba(0, 0, 0, 0.5) url(../img/EnrollYourProperty.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.solutionsHeader h2 {
-  font-size: 50px;
-}
-
-.solutionsHeader p{
-  font-size: 24px;
-  font-weight: 300;
+.homeProperty h2 {
   text-align: center;
+  font-size: 55px;
+  color: white;
+  font-weight: 700;
+  padding-top: 100px;
 }
+
+/*.solutionsHeader h2 {*/
+/*  font-size: 50px;*/
+/*}*/
+
+/*.solutionsHeader p{*/
+/*  font-size: 24px;*/
+/*  font-weight: 300;*/
+/*  text-align: center;*/
+/*}*/
 
 .current {
   color: var(--mainColor)
 }
+
 .horecaMain {
-  background: rgba(0, 0, 0, .7) url(../img/Enroll\ Your\ Kitchen.jpg);
+  background: rgba(0, 0, 0, .7) url(../img/EnrollYourKitchen.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  background-attachment: fixed;
   color: white;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .horecaMain h2{
   padding-top: 120px;
 }
 
-.horeca-bg::before {
-  content: "";
-  background: #b7b7b7 url(../../img/virtual.jpg);
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: darken;
-  opacity: 0.3;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
+/*.horeca-bg::before {*/
+/*  content: "";*/
+/*  background: #b7b7b7 url(../img/virtual.jpg);*/
+/*  background-position: center;*/
+/*  background-size: cover;*/
+/*  background-blend-mode: darken;*/
+/*  opacity: 0.3;*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  right: 0;*/
+/*  top: 0;*/
+/*  z-index: -1;*/
+/*}*/
 
 .horecaLast {
   background-color: white;
@@ -1531,6 +1556,7 @@ dt {
     padding: 120px 0;
   }
 
+
   .horecaMain h2 {
     font-size: 38px;
     padding: 0;
@@ -1562,19 +1588,16 @@ dt {
   }
   /* !Store */
 
-  .storeHead{
-    font-size: 36px !important;
-    width: 90%;
-    margin: 0 auto;
+  .storeHead h2{
+    font-size: 50px;
   }
 
   .storeSection{
     width: 90%;
   }
 
-  .storeHead + p{
-    font-size: 24px !important;
-    margin: 20px auto;
+  .storeHead p{
+    font-size: 24px;
   }
 
   /* !IT solutions */

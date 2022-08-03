@@ -3,7 +3,6 @@ const db = require("../models");
 const sendMail = require("../utils/email.js");
 
 const getHome = catchAsync(async(req,res,next) => {
-    console.log(req.cookies);
     return res.status(200).render("_home",{
         title: "Home"
     });
