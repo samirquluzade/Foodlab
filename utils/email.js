@@ -5,8 +5,8 @@ async function sendMail(message){
         service: 'gmail',
         host: 'smtp.gmail.com',
         auth: {
-            user: "vabiss.test@gmail.com",
-            pass: "Samir12345!"
+            user: process.env.MAIL_FROM,
+            pass: process.env.MAIL_PASSWORD
         }
     }));
     return new Promise((resolve,reject) => {
