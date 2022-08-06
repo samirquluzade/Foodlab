@@ -8,10 +8,10 @@
     "logger": false
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "foodlab",
-    "host": "localhost",
+    "username": "b0010d1bc5d0a3",
+    "password": "80935e0a",
+    "database": "heroku_3efcf310bed976a",
+    "host": "us-cdbr-east-06.cleardb.net",
     "dialect": "mysql",
     "logger": false
   }
