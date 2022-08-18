@@ -10,7 +10,7 @@ export const modalOperations = async data => {
         comments: data.get('comments')
     };
     try{
-        const res = await axios.post('http://127.0.0.1:3000/add_restaurant_comment',{
+        const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/add_restaurant_comment`,{
             ...op,
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export const propertyOperations = async data => {
         footage: data.get('footage')
     };
     try{
-        const res = await axios.post('http://127.0.0.1:3000/add_property_comment',{
+        const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/add_property_comment`,{
             ...op,
             headers: {
                 'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ export const kitchenOperations = async data => {
         food: data.get('food')
     };
     try{
-        const res = await axios.post('http://127.0.0.1:3000/add_kitchen_comment',{
+        const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/add_kitchen_comment`,{
             ...op,
             headers: {
                 'Content-Type': 'application/json'
@@ -89,7 +89,7 @@ export const businessOperations = async data => {
         type: data.get('type')
     };
     try{
-        const res = await axios.post('http://127.0.0.1:3000/add_business_comment',{
+        const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/add_business_comment`,{
             ...op,
             headers: {
                 'Content-Type': 'application/json'
@@ -116,7 +116,7 @@ export const solutionsOperations = async data => {
         comment: data.get('solutions_comment'),
     };
     try{
-        const res = await axios.post('http://127.0.0.1:3000/add_solutions_comment',{
+        const res = await axios.post(`http://127.0.0.1:${process.env.PORT}/add_solutions_comment`,{
             ...op,
             headers: {
                 'Content-Type': 'application/json'
