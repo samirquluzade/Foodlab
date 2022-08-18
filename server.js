@@ -40,7 +40,7 @@ app.use("/users",userRouter);
 
 
 app.listen(PORT, () => {
-    console.log("App working");
+    console.log(`App working from ${PORT} port`);
 });
 
 module.exports = app;
