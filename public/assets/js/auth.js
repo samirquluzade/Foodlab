@@ -4,7 +4,7 @@ import User from '../../../models/User';
 
 export const signup = async(username,password) => {
     try{
-        const res = await axios.post('http://127.0.0.1:3000/users/signup',{
+        const res = await axios.post('http://45.9.191.49:3999/users/signup',{
             username,password
         });
         if(res.data.status === "success"){
@@ -17,7 +17,7 @@ export const signup = async(username,password) => {
 }
 export const login = async(username,password) => {
     try{
-        const res = await axios.post('http:127.0.0.1:3000/users/login',{
+        const res = await axios.post('http:45.9.191.49:3999/users/login',{
             username,password
         });
         return res;
@@ -31,7 +31,7 @@ export const login = async(username,password) => {
 }
 export const logout = async() => {
     try{
-        const res = await axios.get('http:127.0.0.1:3000/users/logout');
+        const res = await axios.get('http:45.9.191.49:3999/users/logout');
         if(res.data.status === "success"){
             successAlert("success","Uğurla hesabdan çıxıldı!");
             window.setTimeout(() => {

@@ -8354,7 +8354,7 @@ const {successAlert,errorAlert} = require('../alerts.js');
 
 const modalOperations = async(data,type) => {
     try{
-        const url = type === "data" && "http://127.0.0.1:3000/add_restaurant_comment";
+        const url = type === "data" && "http://45.9.191.49:3999/add_restaurant_comment";
         const res = await axios({
             method: "POST",
             url,
