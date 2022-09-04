@@ -123,7 +123,7 @@ const addRestaurantComment = catchAsync(async(req,res,next) => {
     if(data){
         let message = {
             from: process.env.MAIL_FROM,
-            to: 'forms@foodlab.az',
+            to: 'foodlabaz123@gmail.com',
             subject: `Restaurant comment`,
             text: `
                 Restaurant name: ${restaurant_name} \n
@@ -174,7 +174,7 @@ const addPropertyComment = catchAsync(async(req,res,next) => {
     if(data){
         let message = {
             from: process.env.MAIL_FROM,
-            to: 'forms@foodlab.az',
+            to: 'foodlabaz123@gmail.com',
             subject: `Property Comment`,
             text: `
                 Name: ${name} \n
@@ -227,7 +227,7 @@ const addEnrollKitchen = catchAsync(async(req,res,next) => {
     if(data){
         let message = {
             from: process.env.MAIL_FROM,
-            to: 'forms@foodlab.az',
+            to: 'foodlabaz123@gmail.com',
             subject: `Kitchen Comment`,
             text: `
                 Name: ${brand_name} \n
@@ -282,7 +282,7 @@ const addBusinessComment = catchAsync(async(req,res,next) => {
         if(data){
             let message = {
                 from: process.env.MAIL_FROM,
-                to: 'forms@foodlab.az',
+                to: 'foodlabaz123@gmail.com',
                 subject: type === "restaurant" ? `Business Restaurant Comment`: "Business Store Comment",
                 text: `
                 Name: ${name} \n
@@ -338,7 +338,7 @@ const addSolutionsComment = catchAsync(async(req,res,next) => {
     if(data){
         let message = {
             from: process.env.MAIL_FROM,
-            to: 'forms@foodlab.az',
+            to: 'foodlabaz123@gmail.com',
             subject: "Solutions Comment",
             text: `
                 Name: ${name} \n

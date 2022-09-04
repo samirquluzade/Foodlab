@@ -3,7 +3,7 @@ import {successAlert,errorAlert} from "../alerts.js";
 
 export const signUp = async(username,password) => {
     try{
-        const res = await axios.post(`http://45.9.191.49:3999/users/signup`,{
+        const res = await axios.post(`http://63.250.33.235:3999/users/signup`,{
             username,password
         });
         if(res.data.success === "success"){
@@ -19,7 +19,7 @@ export const signUp = async(username,password) => {
 }
 export const login = async(username,password) => {
     try{
-        const res = await axios.post(`http://45.9.191.49:3999/users/login`,{
+        const res = await axios.post(`http://63.250.33.235:3999/users/login`,{
             username,password
         });
         return res;
@@ -33,7 +33,7 @@ export const login = async(username,password) => {
 }
 export const logout = async () => {
     try {
-        const res = await axios.post(`http://45.9.191.49:3999/users/logout`);
+        const res = await axios.post(`http://63.250.33.235:3999/users/logout`);
         return res;
     } catch (err) {
         errorAlert("error", "Hesabdan çıxarkən xəta baş verdi. Yenidən cəhd edin!");

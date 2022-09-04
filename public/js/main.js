@@ -49,6 +49,18 @@ closeModal.addEventListener("click", () => {
   modal.classList.remove("clicked");
 });
 
+// Burger menu
+burger.addEventListener("click", () => {
+  console.log('t');
+  navlinks.classList.toggle("openBurger");
+});
+
+window.addEventListener("resize", () => {
+  if (screen.width > 576) {
+    navlinks.classList.remove("openBurger");
+  }
+});
+
 // Submit contact modal
 if(contactDataForm){
   contactDataForm.addEventListener("submit",async (e) => {
@@ -400,19 +412,6 @@ const openModal = () => {
     navlinks.classList.remove("openBurger");
   }
 }
-
-
-
-// Burger menu
-burger.addEventListener("click", () => {
-  navlinks.classList.toggle("openBurger");
-});
-
-window.addEventListener("resize", () => {
-  if (screen.width > 576) {
-    navlinks.classList.remove("openBurger");
-  }
-});
 
 const goTop = () => {
   window.scrollTo({top:0})

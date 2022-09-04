@@ -1543,6 +1543,26 @@ dt {
     justify-content: space-around;
     flex-direction: column;
   }
+  .kitchenForm .container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .businessRestaurantForm .container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .businessStoreForm .container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .solutionsForm .container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
 
   .propertyForm-left {
     width: 100%;
