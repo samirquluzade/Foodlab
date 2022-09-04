@@ -1485,6 +1485,27 @@ dt {
     width: 40% !important;
   }
 
+  .homeProperty h2{
+    font-size: 40px;
+  }
+  .restaurantHead h2 {
+    font-size: 50px;
+  }
+
+  .solutionsHeader h2 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    padding-top: 100px;
+  }
+
+  .solutionsHeader p{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+
   .formInput {
     border-radius: 20px;
     width: 95%;
