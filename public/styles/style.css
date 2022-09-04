@@ -461,7 +461,7 @@ main>h2 {
 }
 
 .homeAbout{
-  background: rgba(0, 0, 0, .5) url(../img/AboutUs.jpg);
+  background: rgba(0, 0, 0, .5) url(../img/AboutUs_50.jpg);
   background-position: top;
   background-size: cover;
   background-blend-mode: darken;
@@ -476,7 +476,7 @@ main>h2 {
 /* !Restaurant */
 
 .restaurantHead{
-  background: rgba(0, 0, 0, .7) url(../img/Business_Kitchen.jpg);
+  background: rgba(0, 0, 0, .7) url(../img/Business_Kitchen_1_50.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
@@ -496,18 +496,18 @@ main>h2 {
 }
 
 /* !Enroll Property */
-.homeVirtual::before {
-  content: "";
-  background: url(../img/virtual.jpg);
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
+/*.homeVirtual::before {*/
+/*  content: "";*/
+/*  background: url(../img/virtual.jpg);*/
+/*  background-position: center;*/
+/*  background-size: cover;*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  right: 0;*/
+/*  top: 0;*/
+/*  z-index: -1;*/
+/*}*/
 
 .homeVirtual::after {
   background-color: rgba(0, 0, 0, 0.5)
@@ -821,7 +821,7 @@ main>h2 {
 }
 
 .restaurantHead{
-  background: rgba(0, 0, 0, .7) url(../img/Business_Kitchen.jpg);
+  background: rgba(0, 0, 0, .7) url(../img/Business_Kitchen_1_50.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
@@ -842,7 +842,7 @@ main>h2 {
 
 /* !Store */
 .storeHead{
-  background: rgba(0, 0, 0, .5) url(../img/DarkStore.jpg);
+  background: rgba(0, 0, 0, .5) url(../img/DarkStore_50.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
@@ -869,7 +869,7 @@ main>h2 {
 
 /* !Solutions */
 .solutionsHeader {
-  background: rgba(0, 0, 0, 0.6) url(../img/ITSolution.jpg);
+  background: rgba(0, 0, 0, 0.6) url(../img/ITSolution_50.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
@@ -923,7 +923,7 @@ main>h2 {
 }
 
 .homeProperty {
-  background: rgba(0, 0, 0, 0.5) url(../img/EnrollYourProperty.jpg);
+  background: rgba(0, 0, 0, 0.5) url(../img/EnrollYourProperty_50.jpg);
   background-position: bottom;
   background-size: cover;
   background-blend-mode: darken;
@@ -956,7 +956,7 @@ main>h2 {
 }
 
 .horecaMain {
-  background: rgba(0, 0, 0, .7) url(../img/EnrollYourKitchen.jpg);
+  background: rgba(0, 0, 0, .7) url(../img/EnrollYourKitchen_50.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
