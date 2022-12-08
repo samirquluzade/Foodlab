@@ -578,7 +578,7 @@ main>h2 {
 .home-bottom h2 {
   font-weight: 600;
   text-align: center;
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .business {
@@ -736,7 +736,7 @@ main>h2 {
   padding: 10px 15px;
   border-radius: 5px;
   margin-bottom: 15px;
-  width: 80%;
+  width: 100%;
 }
 
 .propertyForm-right select {
@@ -796,7 +796,7 @@ main>h2 {
 }
 
 .left-select{
-  width: 80%;
+  width: 100%!important;
 }
 
 /* !Enroll Kitchen */
