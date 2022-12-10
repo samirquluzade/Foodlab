@@ -726,6 +726,7 @@ main>h2 {
 
 .propertyForm-left,
 .propertyForm-right {
+  padding-left: 2%;
   width: 50%;
 }
 
@@ -1551,6 +1552,7 @@ dt {
   }
 
   .propertyForm-right{
+    padding-left: 2%;
     width: 100%;
   }
 
